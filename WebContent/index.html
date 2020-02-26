@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="background-color:#f6f6f6;">
+<div>
+<section>
+<img src="pc.PNG">
+</section>
+</div>
+<h1>CARTA</h1>
+<h4 style="color: #fb8216;">int idcarta | String marca | String modelo | int motor | int cilindros | int potencia | int revoluciones | int velocidad | double consumo</h4>
+<hr />
+<h2>- Obtener todas las cartas</h2>
+<h3 style="color: #fb8216;">GET : http://localhost:8080/ProyectoCartas/api/carta/cartas</h3>
+<h2>- Obtener carta por {id}</h2>
+<h3 style="color: #fb8216;">GET : http://localhost:8080/ProyectoCartas/api/carta/{id}</h3>
+<h2>- Crear carta (atributos arriba &uarr; )</h2>
+<h3 style="color: #fb8216;">POST : http://localhost:8080/ProyectoCartas/api/carta/crear</h3>
+<h2>- Editar carta por {id}</h2>
+<h3 style="color: #fb8216;">PUT : http://localhost:8080/ProyectoCartas/api/carta/{id}</h3>
+<h2>- Eliminar carta por {id}</h2>
+<h3 style="color: #fb8216;">DELETE : http://localhost:8080/ProyectoCartas/api/carta/{id}</h3>
+<h2>- Obtener ultima carta creada (como ampliacion)</h2>
+<h3 style="color: #fb8216;">GET : http://localhost:8080/ProyectoCartas/api/carta/last</h3>
+<p>&nbsp;</p>
+<h1>JUGADOR</h1>
+<h4 style="color: #fb8216;">String nick | String password | int partidas_ganadas | int partidas_perdidas | int partidas_empatadas</h4>
+<hr />
+<h2>- Obtener todos los jugadores</h2>
+<h3 style="color: #fb8216;">GET : http://localhost:8080/ProyectoCartas/api/jugador/jugadores</h3>
+<h2>- Obtener jugador por {nick}</h2>
+<h3 style="color: #fb8216;">GET : http://localhost:8080/ProyectoCartas/api/jugador/{nick}</h3>
+<h2>- Crear jugador (atributos arriba &uarr; )</h2>
+<h3 style="color: #fb8216;">POST : http://localhost:8080/ProyectoCartas/api/carta/crear</h3>
+<h2>- Editar jugador por {nick}</h2>
+<h3 style="color: #fb8216;">PUT : http://localhost:8080/ProyectoCartas/api/carta/{nick}</h3>
+<h2>- Eliminar jugador por {nick}</h2>
+<h3 style="color: #fb8216;">DELETE : http://localhost:8080/ProyectoCartas/api/carta/{nick}</h3>
+<h2>- Obtener ultimo jugador creado (como ampliacion)</h2>
+<h3 style="color: #fb8216;">GET : http://localhost:8080/ProyectoCartas/api/jugador/last</h3><p>&nbsp;</p>
+<h1>SESION</h1>
+<h4 style="color: #fb8216;">int idsesion | int idpartida | String idjugador</h4>
+<hr />
+<h2>- Obtener todas las sesiones</h2>
+<h3 style="color: #fb8216;">GET : http://localhost:8080/ProyectoCartas/api/sesion/sesiones</h3>
+<h2>- Obtener sesion por {id}</h2>
+<h3 style="color: #fb8216;">GET : http://localhost:8080/ProyectoCartas/api/sesion/{idsesion}</h3>
+<h2>- Crear sesion (atributos arriba &uarr; )</h2>
+<h3 style="color: #fb8216;">POST : http://localhost:8080/ProyectoCartas/api/sesion/crear</h3>
+<h2>- Editar sesion por {id}</h2>
+<h3 style="color: #fb8216;">PUT : http://localhost:8080/ProyectoCartas/api/sesion/{idsesion}</h3>
+<h2>- Eliminar sesion por {id}</h2>
+<h3 style="color: #fb8216;">DELETE : http://localhost:8080/ProyectoCartas/api/sesion/{idjugador}</h3>
+<h2>- Obtener ultima sesion creada (como ampliacion)</h2>
+<h3 style="color: #fb8216;">GET : http://localhost:8080/ProyectoCartas/api/sesion/last</h3>
+<p>&nbsp;</p>
+<h1>PARTIDA</h1>
+<h4 style="color: #fb8216;">int idpartida | int idsesion</h4>
+<hr />
+<h2>- Obtener todas las partidas</h2>
+<h3 style="color: #fb8216;">GET : http://localhost:8080/ProyectoCartas/api/partida/partidas</h3>
+<h2>- Obtener partida por {id}</h2>
+<h3 style="color: #fb8216;">GET : http://localhost:8080/ProyectoCartas/api/partida/{idpartida}</h3>
+<h2>- Crear partida (atributos arriba &uarr; )</h2>
+<h3 style="color: #fb8216;">POST : http://localhost:8080/ProyectoCartas/api/partida/crear</h3>
+<h2>- Editar partida por {id}</h2>
+<h3 style="color: #fb8216;">PUT : http://localhost:8080/ProyectoCartas/api/partida/{idpartida}</h3>
+<h2>- Eliminar partida por {id}</h2>
+<h3 style="color: #fb8216;">DELETE : http://localhost:8080/ProyectoCartas/api/partida/{idpartida}</h3>
+<h2>- Obtener ultima partida creada (como ampliacion)</h2>
+<h3 style="color: #fb8216;">GET : http://localhost:8080/ProyectoCartas/api/partida/last</h3>
+<p>&nbsp;</p>
+<h1>GAME</h1>
+<hr />
+<h2>- Hacer login {nick} {password}</h2>
+<h3 style="color: #fb8216;">GET : http://localhost:8080/ProyectoCartas/api/game/login/{nick}/{password}</h3>
+<h2>- Empezar partida {nick} {idsesion} </h2>
+<h3 style="color: #fb8216;">GET : http://localhost:8080/ProyectoCartas/api/game/start/{nick}/{idsesion}</h3>
+<h2>- Jugar carta </h2>
+<h5>(este es complejo pero para una aproximacion que sirva como prueba , hay que pasarle el mismo json que nos devolvio el metodo anterior si el turno es igual a 1 ,
+si el turno es igual a 2 hay que pasarle tambien el mismo json pero poniendo en idcartaJugador la id de la carta que queremos jugar y en featureJugador el nombre de a lo que queremos jugar)
+* esta hecho para que funcione en android</h5>
+<h3 style="color: #fb8216;">POST : http://localhost:8080/ProyectoCartas/api/game/play</h3>
+
+</body>
+</html>
